@@ -5,7 +5,10 @@
 .header{
     &__nav{
         display: flex;
-        justify-content: space-between;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        gap: 20px;
         h1{
             color: $color-primary;
         }
@@ -18,16 +21,18 @@
         background-color: $color-primary;
         color: #fff;
         &:hover{
-            border: 1px solid $color-primary;
+            border: $border-standard;
             color: $color-primary;
+            background-color: #fff;
         }
     }
     &--success{
-        background-color: $color-success;
+        background-color: $color-jade;
         color: #fff;
         &:hover{
-            border: 1px solid  $color-success;
-            color:  $color-success;
+            background-color: #fff;
+            border: 1px solid  $color-jade;
+            color:  $color-jade;
         }
     }
 }
@@ -35,20 +40,72 @@
 .form{
     display: flex;
     flex-direction: column;
-    gap: 5px;
-
+    gap: 15px;
+    
     &__label{
         font-size: 14px;
         color: $color-primary;
         font-weight: 600;
     }
 
-    &__input{
+    &__input {
         padding: 5px 10px;
         border-radius: 5px;
         outline: none;
-        border: 1px solid $color-primary;
+        border: $border-standard;
+        font-family: $font-type;
     }
+    &__select{
+        border-radius: 5px;
+        outline: none;
+        border: $border-standard;
+        padding: 5px 10px;
+        appearance: none;
+	    -webkit-appearance: none;
+	    -moz-appearance: none;
+        display: inline-block;
+        cursor: pointer;
+        outline: 0; 
+        color: $color-secondary;
+        font-family: $font-type;
+        transition: all 0.25s ease;
+        &:hover{
+            color: #fff;
+            background-color: $color-primary;
+        }
+    }
+
+    & ::placeholder{
+        color: $color-secondary;
+    }
+
+}
+
+.main__table{
+  display: flex;
+  flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin: 50px 100px;
+    border: $border-standard;
+    background-color: #fff;
+    border-radius: 5px;
+    color: $color-secondary;
+}
+
+.main__table td {
+    padding: 15px;
+}
+.main__table thead tr{
+    display: flex;
+    padding-top: 20px;
+    gap: 50px;
+    color: $color-primary;
 }
 
 
+
+
+.material-symbols-outlined{
+    cursor: pointer;
+}

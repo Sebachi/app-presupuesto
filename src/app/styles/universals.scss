@@ -9,5 +9,11 @@
 body{
     font-family: $font-type;
     padding: 40px;
+    background-color: $color-background;
+    display: flex;
+    flex-direction: column;
+    height: 700px;
+    justify-content: center;
+    gap: 20px ;
 }
 
